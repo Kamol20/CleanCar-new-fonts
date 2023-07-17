@@ -1,0 +1,113 @@
+@use './colors' as *;
+
+@media (max-width: 768px) {
+	section {
+		.underline {
+			width: 50%;
+		}
+	}
+
+	.home-section {
+		margin-top: 2em;
+		.hero-img {
+			top: 0;
+			width: 100%;
+			.main-img {
+				background-image: url('../../dist/img/mercedes-e-class-small.jpg');
+			}
+		}
+	}
+	.nav-bar {
+		padding: 0;
+		.brand-logo {
+			padding: 0.5em;
+		}
+		.nav-links {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			width: 100%;
+			height: 100vh;
+			transform: translateX(100%);
+			transition: transform 0.5s;
+			background-color: $green-color;
+			a {
+				margin: 0.5em 0;
+			}
+
+			a:hover {
+				color: $white-color;
+			}
+
+			a::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0%;
+				height: 2px;
+				background-color: $beige-color;
+				border-radius: 50%;
+				transition: width 0.3s;
+			}
+
+			a:hover::before {
+				width: 100%;
+			}
+		}
+
+		.burger-icon {
+			display: block;
+		}
+	}
+
+	.nav-links.mobile-menu {
+		transform: translateX(0%);
+	}
+
+	.aboutus {
+		.aboutus-container {
+			flex-direction: column;
+			padding-top: 5em;
+
+			.aboutus-text {
+				width: 80%;
+				padding-bottom: 2em;
+				line-height: 2.5rem;
+			}
+
+			.aboutus-img {
+				width: 100%;
+			}
+		}
+	}
+
+	.oferts {
+		.cards-container {
+			flex-direction: column;
+
+			.card {
+				margin-bottom: 3em;
+			}
+
+			.card:hover {
+				transform: scale(1);
+				z-index: 0;
+			}
+		}
+	}
+
+	.contact {
+		.hero-img {
+			.contact-img {
+				background-image: url('../../dist/img/car-2220054_small.jpg');
+				background-position: -100px 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+@media (max-width: 992px) {
+	.home-section {
+		.home-text {
+			top: 27%;
+		}
+
+		.hero-img {
+			width: 80%;
+			.img-shadow {
+				display: block;
+			}
+		}
+	}
+	.nav-bar {
+		a {
+			font-size: 2.5em;
+		}
+	}
+
+	.contact {
+		.hero-img {
+			.contact-img {
+				height: 700px;
+			}
+			.contact-container {
+				flex-direction: column;
+				.contact-info {
+					padding-bottom: 1em;
+					width: 310px;
+					line-height: 4rem;
+
+					a {
+						margin: 0.5em;
+					}
+				}
+
+				.contact-map {
+					width: 85%;
+				}
+			}
+		}
+	}
+}
